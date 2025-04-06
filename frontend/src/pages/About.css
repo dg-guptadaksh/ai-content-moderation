@@ -1,0 +1,109 @@
+/* About Page Styling */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000; /* Neon Black Background */
+    color: #00bfff; /* Neon Blue Text */
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+    padding: 50px 20px;
+}
+
+/* About Title - Centered */
+.about-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #00bfff;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+    animation: glow 2s infinite alternate;
+    margin-bottom: 10px;
+
+}
+
+/* About Text Box */
+.about-box {
+    width: 80%; /* Limits width for better readability */
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.2); /* Almost invisible box */
+    padding: 30px;
+    border-radius: 0px;
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.7); /* Neon glow */
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.about-box:hover {
+    transform: scale(1.0.5);
+    box-shadow: 0 0 20px #00bfff;
+}
+
+
+/* About Text */
+.about-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-shadow: 0 0 5px #00bfff;
+    line-height: 1.6;
+}
+
+/* Dashboard Navigation */
+.dashboard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+    background-color: #000;
+   
+    z-index: 1000;
+}
+
+/* Dashboard Buttons */
+.dashboard-btn {
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+    color: #000;
+    background: linear-gradient(45deg, #00bfff, #0080ff);
+    box-shadow: 0 0 10px #00bfff;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.dashboard-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00bfff;
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Text Glow Effect */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff;
+    }
+    to {
+        text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+    }
+}

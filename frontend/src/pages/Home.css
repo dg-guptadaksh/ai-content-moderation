@@ -1,0 +1,144 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #000 !important; /* Ensures a full black background */
+    color: #00bfff; /* Neon blue text */
+    font-family: 'Poppins', sans-serif;
+}
+/* Dashboard Styling */
+.dashboard {
+    position: absolute; /* Positions the dashboard at the top */
+    top: 0; /* Moves it to the very top */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+    background-color: #000;
+    
+    z-index: 1000; /* Ensures it stays above other content */
+}
+
+
+/* Dashboard Buttons */
+.dashboard-btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+    color: #000;
+    background: #00bfff;
+    box-shadow: 0 0 10px #00bfff;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Button Hover Effects */
+.dashboard-btn:hover,
+.login-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #00bfff;
+}
+
+/* Center content */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #000; /* Ensures full black background */
+}
+  .title {
+    font-size: 7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+    animation: glow 2s infinite alternate;
+  }
+  
+  .subtitle {
+    font-size: 3rem;
+    margin-top: 0px;
+    font-weight: 400;
+    text-shadow: 0 0 5px #00bfff;
+  }
+  
+  .button-container {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .login-btn {
+    padding: 20px 40px;
+    font-size: 2rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+    color: #000;
+    background: linear-gradient(45deg, #00bfff, #0080ff);
+    box-shadow: 0 0 10px #00bfff;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .login-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(0, 191, 255, 0.4), transparent);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease-out;
+  }
+  
+  .login-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .login-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00bfff;
+  }
+  
+  /* Specific button styles */
+  .facebook {
+    background: linear-gradient(45deg, #1877f2, #00bfff);
+  }
+  
+  .instagram {
+    background: linear-gradient(45deg, #833AB4, #00bfff);
+  }
+  
+  /* Smooth fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Text glowing effect */
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff;
+    }
+    to {
+      text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+    }
+  }
+  

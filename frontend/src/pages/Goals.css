@@ -1,0 +1,126 @@
+/* Full Page Styling */
+.goals-page {
+    background: #000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Dashboard Styling */
+.dashboard {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Dashboard Buttons */
+.dashboard-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+    color: #000;
+    background: linear-gradient(45deg, #00bfff, #0080ff);
+    box-shadow: 0 0 10px #00bfff;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00bfff;
+}
+
+/* Goals Section Styling */
+.goals-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #00bfff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    padding-top: 80px; /* To avoid overlap with the fixed dashboard */
+}
+
+/* Title Styling */
+.goals-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #00bfff;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+    margin-bottom: 3px;
+    animation: glow 2s infinite alternate;
+}
+
+/* Goals Content Box */
+.goals-box {
+    background: rgba(0, 0, 0, 0.2); /* Slightly visible */
+    border-radius: 0px;
+    padding: 30px;
+    width: 90%;
+    box-shadow: 0 0 15px #00bfff; /* Neon glow */
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.goals-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px #00bfff;
+}
+
+/* Goals List */
+.goals-list {
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0;
+    animation: slideUp 1s ease-in-out;
+}
+
+/* List Item Styling */
+.goals-list li {
+    margin: 15px 0;
+    padding: 10px;
+    background: linear-gradient(45deg, rgba(0, 191, 255, 0.3), transparent);
+    border-radius: 0px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* List Item Hover */
+.goals-list li:hover {
+    background: linear-gradient(45deg, rgba(0, 191, 255, 0.6), transparent);
+}
+
+/* Smooth Fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Neon Glow Effect */
+@keyframes glow {
+    from { text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff; }
+    to { text-shadow: 0 0 15px #00bfff, 0 0 25px #00bfff; }
+}
+
+/* Slide-Up Effect */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
